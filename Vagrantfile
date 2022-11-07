@@ -13,7 +13,8 @@ Vagrant.configure(2) do |config|
     end
   
     config.vm.hostname = "debian-pixie"
-    config.vm.network :private_network, ip: "192.168.61.11" # Valid range: 192.168.56.0/21 For pxe switch to public network
+    config.vm.network "public_network", bridge: "eth0", ip: "192.168.60.11"
+    #config.vm.network :private_network, ip: "192.168.60.11" # Valid range: 192.168.56.0/21 For pxe switch to public network
   
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "playbook.yml"
