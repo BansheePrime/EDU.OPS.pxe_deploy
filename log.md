@@ -30,3 +30,17 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 sudo docker run hello-world
 
+### Bash cli 
+HISTCONTROL=ignoreboth:erasedups
+HISTCONTROL=ignorespace
+
+### Step #1
+cd $HOME
+mkdir ~/foundryvtt_data
+
+### Step #2
+cd $HOME
+scp secrets.json username@foundryhost_address:~/
+
+### Step #3 - launch foundry server
+docker compose up --detach
