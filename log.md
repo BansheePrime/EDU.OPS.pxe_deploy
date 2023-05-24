@@ -43,5 +43,6 @@ mkdir ~/foundryvtt_data
 cd $HOME
 scp secrets.json username@foundryhost_address:~/
 
+
 ### Step #3 - launch foundry server
 docker compose up --detach
