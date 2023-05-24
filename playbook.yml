@@ -1,22 +1,12 @@
 ---
 - hosts: all
-  become: yes
-
+  # gather-facts: no
   tasks:
-  - name: Ensure chrony (for time synchronization) is installed.
-    dnf:
-      name: chrony
-      state: present
+    - name: Print message
+      debug:
+        msg: Hello, Ansible World!
 
-  - name: Ensure chrony is running.
-    service:
-      name: chronyd
-      state: started
-      enabled: yes
-
-# The same as the above play, but in super-compact form!
-- hosts: all
-  become: yes
-  tasks:
-  - dnf: name=chrony state=present
-  - service: name=chronyd state=started enabled=yes
+    - name: Upgrade all packages
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest

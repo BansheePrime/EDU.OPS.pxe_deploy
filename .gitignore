@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # Local README file
 readme_FIRST.md
+=======
+# Adding project Pixie specifics
+.vagrant/
+>>>>>>> db28d6a41e7b1966779c64edcac8798dafef95d1
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
