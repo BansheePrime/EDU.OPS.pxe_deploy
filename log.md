@@ -33,6 +33,7 @@ sudo docker run hello-world
 ### Bash cli 
 HISTCONTROL=ignoreboth:erasedups
 HISTCONTROL=ignorespace
+source ~/.bashrc
 
 ### Step #1
 cd $HOME
