@@ -46,3 +46,9 @@ scp secrets.json username@foundryhost_address:~/
 
 ### Step #3 - launch foundry server
 docker compose up --detach
+
+### Ngrok setup
+wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar -xvzf ./ngrok.tgz
+/ngrok config add-authtoken {enter token here}
+./ngrok http 30000
